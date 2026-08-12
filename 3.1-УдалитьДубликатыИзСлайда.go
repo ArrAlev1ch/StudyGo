@@ -13,9 +13,7 @@ func RemoveDuplicate(s []int) []int {
 			res = append(res, i)
 			m[i] = true
 		} 
-
 	}
-
 	return res
 }
 
