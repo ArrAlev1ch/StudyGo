@@ -2,21 +2,27 @@ package main
 
 import "fmt"
 
-func main() {
+func RemoveDuplicate(s []int) []int {
 
-	s := []int{1, 2, 2, 3, 1, 4}
 	m := make(map[int]bool)
 	res := []int{}
 
-	for i := range s {
+	for _, i := range s {
 
-		if m[s[i]] == false {
-			res = append(res, s[i])
-			m[s[i]] = true
+		if m[i] == false {
+			res = append(res, i)
+			m[i] = true
 		} 
 
 	}
 
-	fmt.Println(res)
+	return res
+}
+
+func main() {
+
+	s := []int{1, 2, 2, 3, 1, 4}
+	rem_s := RemoveDuplicate(s)
+	fmt.Println(rem_s)
 
 }
