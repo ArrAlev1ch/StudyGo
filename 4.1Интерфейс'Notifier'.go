@@ -9,8 +9,8 @@ type Notifier interface {
 type EmailNotifier struct{}
 func (e EmailNotifier) Notify(message string) {
 	fmt.Println("Отправлено письмо:", message)
-	
 }
+
 type TelegramNotifier struct{}
 func (t TelegramNotifier) Notify(message string){
 	fmt.Println("Отправлено сообщение в Telegram:", message)
